@@ -30,6 +30,8 @@ export const Paragraph = styled.p`
 
 export const Title = styled.h3`
   text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
 `;
 
 export const Note = styled.h4`

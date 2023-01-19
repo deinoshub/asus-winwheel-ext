@@ -56,29 +56,30 @@ const AsusWinwheel = React.forwardRef<AsusWinwheelInstance, AsusWinwheelProps>(
       }
 
       const ctx = canvas.getContext("2d");
-      const centerX = offsetWidth / 2;
-      const centerY = offsetHeight / 2;
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
       if (ctx) {
         const text = "Đang tải...";
         ctx.save();
         ctx.font = "20px Helvetica Neue";
-        ctx.clearRect(0, 0, offsetWidth, offsetHeight);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillText(text, centerX - ctx.measureText(text).width / 2, centerY);
         ctx.restore();
       }
 
-      let rW = offsetWidth / width;
-      if (rW > 1) {
-        rW = 1;
+      let squarePointer = 100;
+      if (canvas.width / width < 1) {
+        squarePointer = canvas.width * (5 / 24);
       }
-      let rH = offsetHeight / height;
-      if (rH > 1) {
-        rH = 1;
+
+      let squareWheel = 400;
+      if (canvas.height / height < 1) {
+        squareWheel = canvas.height * (5 / 6);
       }
 
       Promise.all([
-        loadImageAsync(pointerAsset, 80 * rW, 80 * rH),
-        loadImageAsync(wheelAsset, 400 * rW, 400 * rH),
+        loadImageAsync(pointerAsset, squarePointer, squarePointer),
+        loadImageAsync(wheelAsset, squareWheel, squareWheel),
         sleepAsync(0),
       ]).then((results) => {
         theWheel = new Winwheel({
