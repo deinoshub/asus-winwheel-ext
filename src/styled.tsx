@@ -12,13 +12,17 @@ export const Button = styled.button`
   display: block;
   color: #ffffff;
   background-color: #000000;
-  padding: 10px 30px;
+  padding: 8px 30px;
   font-size: 16px;
   font-weight: 500;
   margin: 0 auto;
   cursor: pointer;
   min-width: 135px;
   border: none;
+  
+  &:hover {
+    background-color: #272727;
+  }
 `;
 
 export const Paragraph = styled.p`

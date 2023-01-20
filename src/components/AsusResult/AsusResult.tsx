@@ -66,7 +66,7 @@ const AsusResult = (props: AsusResultProps) => {
           bệnh,...), quà có thể được vận chuyển đến chậm hơn so với dự kiến.
         </Paragraph>
         <Paragraph>
-          - Ngày cuối cùng nhận khiếu nại: 15/03/2022. ASUS sẽ không giải quyết
+          - Ngày cuối cùng nhận khiếu nại: 15/03/2023. ASUS sẽ không giải quyết
           bất kỳ trường hợp khiếu nại nào liên quan đến chương trình sau thời
           gian này.
         </Paragraph>
