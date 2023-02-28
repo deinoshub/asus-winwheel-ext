@@ -20,7 +20,7 @@ const AsusContact = (props: AsusContactProps) => {
       </Paragraph>
       <Paragraph style={{ textAlign: "center" }}>
         Mọi khiếu nại, phản ánh vui lòng liên hệ hotline và fanpage ASUS trước
-        ngày 15/03/2023.
+        ngày 15/4/2023.
       </Paragraph>
       <br />
       <Button onClick={props.onClick}>Đóng</Button>
